@@ -3015,14 +3015,14 @@ and properties.
 
 #### `new ExternalsPlugin(type, externals)`
 
-* `type` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"jsonp"|"system"|"commonjs"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"|object}
+* `type` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"commonjs"|"jsonp"|"system"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"|object}
 * `externals` {Externals}
 * Returns: {ExternalsPlugin}
 
 ### Properties
 
 * `externals` {Externals}
-* `type` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"jsonp"|"system"|"commonjs"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"|object}
+* `type` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"commonjs"|"jsonp"|"system"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"|object}
 
 ### Methods
 
@@ -5836,7 +5836,7 @@ Apply the plugin
 
 ### Indexable
 
-\[`index`: {number}\]: {object}
+> \[`index`: {number}\]: {object}
 
 ### Constructors
 
@@ -6205,7 +6205,7 @@ Options object as provided by the user.
 * `extends` {string|string[]} Extend configuration from another configuration (only works when using webpack-cli).
 * `externals` {string|RegExp|ExternalItemObjectKnown&ExternalItemObjectUnknown|object|object|ExternalItem[]} Specify dependencies that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.
 * `externalsPresets` {ExternalsPresets} Enable presets of externals for specific targets.
-* `externalsType` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"jsonp"|"system"|"commonjs"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"} Specifies the default type of externals ('amd*', 'umd*', 'system' and 'jsonp' depend on output.libraryTarget set to the same value).
+* `externalsType` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"commonjs"|"jsonp"|"system"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"} Specifies the default type of externals ('amd*', 'umd*', 'system' and 'jsonp' depend on output.libraryTarget set to the same value).
 * `ignoreWarnings` {RegExp|object|object[]} Ignore specific warnings.
 * `infrastructureLogging` {InfrastructureLogging} Options for infrastructure level logging.
 * `loader` {Loader} Custom values available in the loader context.
@@ -6238,7 +6238,7 @@ Multiple entry bundles are created. The key is the entry name. The value can be 
 
 ### Indexable
 
-\[`index`: {string}\]: {string|string[]|EntryDescription}
+> \[`index`: {string}\]: {string|string[]|EntryDescription}
 
 ***
 
@@ -6270,7 +6270,7 @@ If an dependency matches exactly a property of the object, the property value is
 
 ### Indexable
 
-\[`index`: {string}\]: {ExternalItemValue}
+> \[`index`: {string}\]: {ExternalItemValue}
 
 ***
 
@@ -6812,7 +6812,7 @@ Normalized webpack options object.
 * `experiments` {ExperimentsNormalized} Enables/Disables experiments (experimental features with relax SemVer compatibility).
 * `externals` {Externals} Specify dependencies that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.
 * `externalsPresets` {ExternalsPresets} Enable presets of externals for specific targets.
-* `externalsType` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"jsonp"|"system"|"commonjs"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"} Specifies the default type of externals ('amd*', 'umd*', 'system' and 'jsonp' depend on output.libraryTarget set to the same value).
+* `externalsType` {"asset"|"module"|"css-import"|"css-url"|"global"|"import"|"promise"|"this"|"var"|"script"|"commonjs"|"jsonp"|"system"|"assign"|"amd"|"amd-require"|"umd"|"umd2"|"commonjs2"|"window"|"self"|"commonjs-static"|"commonjs-module"|"node-commonjs"|"module-import"} Specifies the default type of externals ('amd*', 'umd*', 'system' and 'jsonp' depend on output.libraryTarget set to the same value).
 * `ignoreWarnings` {object[]} Ignore specific warnings.
 * `infrastructureLogging` {InfrastructureLogging} Options for infrastructure level logging.
 * `loader` {Loader} Custom values available in the loader context.
@@ -6844,7 +6844,7 @@ Plugin instance.
 
 ### Indexable
 
-\[`index`: {string}\]: {any}
+> \[`index`: {string}\]: {any}
 
 ### Properties
 
@@ -7029,21 +7029,23 @@ Plugin instance.
 
 > **ResolvePluginInstance** = {object|object}
 
-### Type Declaration
+### Union Members
+
+#### Type Literal
 
 {object}
 
-### Index Signature
+#### Index Signature
 
 \[`index`: {string}\]: {any}
 
 * `apply` {object} The run point of the plugin, required method.
 
-{object}
+***
 
-* `this` {Resolver}
-* `arg1` {Resolver}
-* Returns: {void}
+#### Function
+
+{object}
 
 ***
 
@@ -7063,13 +7065,21 @@ Plugin instance.
 
 > **RuleSetUse** = {string|undefined|null|string|false|0|RuleSetUseFunction|object[]|RuleSetUseFunction|object}
 
-### Type Declaration
+### Union Members
 
 {string}
 
+***
+
 {undefined|null|string|false|0|RuleSetUseFunction|object[]}
 
+***
+
 {RuleSetUseFunction}
+
+***
+
+#### Type Literal
 
 {object}
 
@@ -7092,11 +7102,17 @@ Plugin instance.
 
 > **RuleSetUseItem** = {string|RuleSetUseFunction|object}
 
-### Type Declaration
+### Union Members
 
 {string}
 
+***
+
 {RuleSetUseFunction}
+
+***
+
+#### Type Literal
 
 {object}
 
